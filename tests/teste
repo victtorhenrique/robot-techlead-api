@@ -1,0 +1,18 @@
+*** Settings ***
+Library    JSONLibrary
+
+*** Variables ***
+
+${JSON_FILE_PATH}    ${EXECDIR}${/}fixtures${/}ceps.json
+
+*** Test Cases ***
+Acessar Valores Do JSON
+    # Carregar o JSON a partir do arquivo
+    ${json_data}=    Load JSON From File    ${JSON_FILE_PATH}
+    
+    # Le o conteudo do Json e acessa a chave CEPS, onde contem os ceps
+    ${ceps}=    Get Value From JSON    ${json_data}    $.ceps
+    
+    #Acessa a lista de ceps e escolhe um aletaoriamente
+    ${value}=  Evaluate  random.choice(${ceps[0]})  random
+    log to console  \nvalue: ${value}

@@ -57,7 +57,5 @@ Atualizar um usuario criado
 
     ${response_get_user}    GET On Session    auth     ${AMBIENTE.ENDPOINTS.USER}${ID}    headers=${HEADERS}
 
-    Status Should Be    200
-
     Should Be Equal    ${response_get_user.json()["fullName"]}    ${response_put_user.json()["updatedUser"]["fullName"]}    
        

@@ -1,0 +1,5 @@
+AMBIENTE:
+  URL: https://the-originals.qacoders.dev.br/api/
+
+  ENDPOINTS:
+    USER: user/

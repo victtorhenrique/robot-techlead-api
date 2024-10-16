@@ -1,0 +1,6 @@
+AMBIENTE:
+  URL: https://develop.qacoders.dev.br/api/
+
+  ENDPOINTS:
+    USER: user/
+
