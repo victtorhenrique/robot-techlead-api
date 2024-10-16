@@ -6,7 +6,6 @@ def get_env():
     parser = argparse.ArgumentParser()
     parser.add_argument("--env", default="default")
     args = parser.parse_args()
-
     return args.env
 
 if __name__ == '__main__':
@@ -17,6 +16,11 @@ if __name__ == '__main__':
     # Deletar a pasta de logs antes de iniciar a execução
     delete_logs()
 
-    cli_args = ["-d", "./logs", "--variable", f"ENV:{env}", "."]
+    cli_args = ["-d", 
+                "./logs", 
+                "--variable", 
+                f"ENV:{env}", 
+                "."
+    ]
 
     run_cli(cli_args)
