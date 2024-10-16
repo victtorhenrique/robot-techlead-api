@@ -3,3 +3,4 @@ venv
 env
 .venv
 /tests/teste.robot
+__pycache__
